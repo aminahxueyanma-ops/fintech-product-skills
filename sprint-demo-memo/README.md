@@ -1,5 +1,7 @@
 # Sprint Demo Memo — an Agent Skill
 
+**English** | [中文](./README.zh-CN.md)
+
 Turn a finished sprint into a polished, company-wide **demo memo** — and publish it straight to
 Confluence. The skill pulls the sprint's deployed tickets from Jira, decides what's worth
 demoing, groups features by theme, and drafts everything in plain, read-it-out-loud English so

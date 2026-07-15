@@ -1,5 +1,7 @@
 # Jira Ticket Writer — an Agent Skill
 
+**English** | [中文](./README.zh-CN.md)
+
 Turn messy, half-baked task descriptions into clean, well-structured English Jira tickets —
 and create them directly in Jira. Paste a rough note (English, Chinese, or a mix), and the
 skill drafts a proper **Story** or **Bug**, picks the right **Component**, auto-assigns a
