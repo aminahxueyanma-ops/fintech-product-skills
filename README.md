@@ -21,7 +21,30 @@ _More skills coming — this repo is the umbrella for product/engineering agent 
 Each skill lives in its own folder. Replace `<skill-name>` with the skill you want (e.g.
 `jira-ticket-writer`).
 
-**Quickest — one skill, no git history** (needs [Node.js](https://nodejs.org)):
+**Easiest — the install script** (clone once, then run it):
+
+```bash
+# macOS / Linux
+git clone https://github.com/aminahxueyanma-ops/fintech-product-skills.git
+cd fintech-product-skills
+./install.sh                    # all skills  ·  or:  ./install.sh jira-ticket-writer
+```
+
+```powershell
+# Windows (PowerShell)
+git clone https://github.com/aminahxueyanma-ops/fintech-product-skills.git
+cd fintech-product-skills
+.\install.ps1                   # all skills  ·  or:  .\install.ps1 jira-ticket-writer
+```
+
+The script installs to `~/.claude/skills/` by default. For a project-level install, set the
+destination: `DEST=./my-repo/.claude/skills ./install.sh` (or `-Dest` on PowerShell).
+
+---
+
+Prefer to do it by hand? Pick one of these:
+
+**One skill, no git history** (needs [Node.js](https://nodejs.org)):
 
 ```bash
 npx degit aminahxueyanma-ops/fintech-product-skills/<skill-name> ~/.claude/skills/<skill-name>
