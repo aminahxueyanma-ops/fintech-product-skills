@@ -1,5 +1,7 @@
 # Fintech Product Skills
 
+**English** | [中文](./README.zh-CN.md)
+
 A collection of [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) for product
 and engineering work, born out of real fintech / payments product practice — but written to be
 **generic and reusable** on any team. Each skill is self-contained, secret-free, and configured
