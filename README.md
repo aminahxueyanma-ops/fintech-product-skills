@@ -10,6 +10,7 @@ by editing placeholders (no API keys committed).
 | Skill | What it does |
 |---|---|
 | [`jira-ticket-writer`](./jira-ticket-writer) | Turns messy, mixed-language task notes into clean, structured English Jira tickets — auto-picks Story/Bug, Component, and Priority (P0/P1/P2), and files them via the Atlassian MCP. |
+| [`sprint-demo-memo`](./sprint-demo-memo) | Turns a finished sprint into a company-wide demo memo — pulls Jira tickets, classifies what's demoable (excluding Compliance/TM rule changes), groups by theme, drafts in demo voice, and publishes to Confluence. |
 
 _More skills coming — this repo is the umbrella for product/engineering agent skills._
 
