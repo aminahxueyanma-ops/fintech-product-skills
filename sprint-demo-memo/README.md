@@ -38,15 +38,29 @@ fill into `SKILL.md` — project key, cloud ID, Confluence space ID, parent page
 
 ## Install
 
-Copy the `sprint-demo-memo/` folder into your skills directory:
+**Quickest — no git history** (needs [Node.js](https://nodejs.org)):
 
+```bash
+npx degit aminahxueyanma-ops/fintech-product-skills/sprint-demo-memo ~/.claude/skills/sprint-demo-memo
 ```
-# Claude Code (user-level)
-~/.claude/skills/sprint-demo-memo/
 
-# or project-level
-<your-repo>/.claude/skills/sprint-demo-memo/
+**With git — macOS / Linux:**
+
+```bash
+git clone https://github.com/aminahxueyanma-ops/fintech-product-skills.git
+mkdir -p ~/.claude/skills
+cp -r fintech-product-skills/sprint-demo-memo ~/.claude/skills/
 ```
+
+**With git — Windows (PowerShell):**
+
+```powershell
+git clone https://github.com/aminahxueyanma-ops/fintech-product-skills.git
+New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
+Copy-Item -Recurse "fintech-product-skills\sprint-demo-memo" "$HOME\.claude\skills\"
+```
+
+For a project-level install, swap `~/.claude/skills/` for `<your-repo>/.claude/skills/`.
 
 ## Configure (required before first use)
 

@@ -48,15 +48,29 @@ So the only setup a user needs is: (1) connect and authorize the Atlassian MCP, 
 
 ## Install
 
-Copy the `jira-ticket-writer/` folder into your skills directory:
+**Quickest — no git history** (needs [Node.js](https://nodejs.org)):
 
+```bash
+npx degit aminahxueyanma-ops/fintech-product-skills/jira-ticket-writer ~/.claude/skills/jira-ticket-writer
 ```
-# Claude Code (user-level skills)
-~/.claude/skills/jira-ticket-writer/SKILL.md
 
-# or project-level
-<your-repo>/.claude/skills/jira-ticket-writer/SKILL.md
+**With git — macOS / Linux:**
+
+```bash
+git clone https://github.com/aminahxueyanma-ops/fintech-product-skills.git
+mkdir -p ~/.claude/skills
+cp -r fintech-product-skills/jira-ticket-writer ~/.claude/skills/
 ```
+
+**With git — Windows (PowerShell):**
+
+```powershell
+git clone https://github.com/aminahxueyanma-ops/fintech-product-skills.git
+New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
+Copy-Item -Recurse "fintech-product-skills\jira-ticket-writer" "$HOME\.claude\skills\"
+```
+
+For a project-level install, swap `~/.claude/skills/` for `<your-repo>/.claude/skills/`.
 
 ## Configure (required before first use)
 

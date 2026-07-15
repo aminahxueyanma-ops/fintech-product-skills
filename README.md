@@ -18,15 +18,38 @@ _More skills coming — this repo is the umbrella for product/engineering agent 
 
 ## Install a skill
 
-Each skill lives in its own folder. Copy the folder into your agent's skills directory:
+Each skill lives in its own folder. Replace `<skill-name>` with the skill you want (e.g.
+`jira-ticket-writer`).
 
-```
-# Claude Code (user-level)
-~/.claude/skills/<skill-name>/
+**Quickest — one skill, no git history** (needs [Node.js](https://nodejs.org)):
 
-# or project-level
-<your-repo>/.claude/skills/<skill-name>/
+```bash
+npx degit aminahxueyanma-ops/fintech-product-skills/<skill-name> ~/.claude/skills/<skill-name>
 ```
+
+**With git — macOS / Linux:**
+
+```bash
+git clone https://github.com/aminahxueyanma-ops/fintech-product-skills.git
+mkdir -p ~/.claude/skills
+cp -r fintech-product-skills/<skill-name> ~/.claude/skills/
+```
+
+**With git — Windows (PowerShell):**
+
+```powershell
+git clone https://github.com/aminahxueyanma-ops/fintech-product-skills.git
+New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
+Copy-Item -Recurse "fintech-product-skills\<skill-name>" "$HOME\.claude\skills\"
+```
+
+> **Install all skills at once:** replace the single `<skill-name>` copy with the whole repo —
+> `npx degit aminahxueyanma-ops/fintech-product-skills ~/.claude/skills-src` (then move the skill
+> folders into `~/.claude/skills/`), or just `cp -r fintech-product-skills/*/ ~/.claude/skills/`
+> after cloning.
+>
+> **Project-level instead of user-level:** swap `~/.claude/skills/` for
+> `<your-repo>/.claude/skills/`.
 
 Then follow the per-skill `README.md` and configure the placeholders in its `SKILL.md`.
 

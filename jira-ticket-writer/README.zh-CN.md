@@ -38,15 +38,29 @@ Claude Code 以及其它支持 skills 的 agent 运行环境中使用。
 
 ## 安装
 
-把 `jira-ticket-writer/` 文件夹复制到你的 skills 目录：
+**最快 —— 无 git 历史**（需要 [Node.js](https://nodejs.org)）：
 
+```bash
+npx degit aminahxueyanma-ops/fintech-product-skills/jira-ticket-writer ~/.claude/skills/jira-ticket-writer
 ```
-# Claude Code（用户级 skills）
-~/.claude/skills/jira-ticket-writer/SKILL.md
 
-# 或项目级
-<your-repo>/.claude/skills/jira-ticket-writer/SKILL.md
+**用 git —— macOS / Linux：**
+
+```bash
+git clone https://github.com/aminahxueyanma-ops/fintech-product-skills.git
+mkdir -p ~/.claude/skills
+cp -r fintech-product-skills/jira-ticket-writer ~/.claude/skills/
 ```
+
+**用 git —— Windows（PowerShell）：**
+
+```powershell
+git clone https://github.com/aminahxueyanma-ops/fintech-product-skills.git
+New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
+Copy-Item -Recurse "fintech-product-skills\jira-ticket-writer" "$HOME\.claude\skills\"
+```
+
+装到项目级的话，把 `~/.claude/skills/` 换成 `<your-repo>/.claude/skills/`。
 
 ## 配置（首次使用前必做）
 
